@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Main {
+    public static void checkTriangle() {
+      Scanner sc = new Scanner(System.in);
+      int A = sc.nextInt();
+       int B = sc.nextInt();
+        int C = sc.nextInt();
+        sc.close();
+        if (A + B + C == 180 && A > 0 && B > 0 && C > 0) {
+          System.out.println("VALID");
+          if (A == B && B == C) {
+             System.out.println("EQUILATERAL");
+        }else if (A == B || B == C || A == C) {
+          System.out.println("ISOSCELES");;
+        }else {
+          System.out.println("SCALENE");
+        }
+        }else {
+      System.out.println("NOT VALID");
+  }
+}
+public static void main(String[]args) {
+  checkTriangle();
+}
+}
